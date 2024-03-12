@@ -113,6 +113,7 @@ const AppBar = (props) => {
               "& .MuiInputBase-root": {
                 height: "30px",
               },
+              display: { xs: "none", sm: "block" },
             }}
             InputProps={{
               startAdornment: (
