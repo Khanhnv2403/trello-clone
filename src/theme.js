@@ -4,8 +4,11 @@ import { experimental_extendTheme as extendTheme } from "@mui/material/styles";
 // Create a theme instance.
 const theme = extendTheme({
   trello: {
-    appBarHeight: "58px",
+    appBarHeight: "48px",
     boardBarHeight: "60px",
+  },
+  typography: {
+    fontSize: 12,
   },
   colorSchemes: {
     light: {
@@ -50,7 +53,8 @@ const theme = extendTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           color: theme.palette.primary.main,
-          fontSize: "0.875rem",
+          fontSize: "0.75rem",
+          top: "3px",
         }),
       },
     },
@@ -67,6 +71,7 @@ const theme = extendTheme({
               borderColor: theme.palette.primary.main,
             },
           },
+
           "& fieldset": {
             borderWidth: "1px !important",
           },
