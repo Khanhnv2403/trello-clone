@@ -25,6 +25,7 @@ import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 
 const AppBar = (props) => {
   const { window } = props;
@@ -99,7 +100,9 @@ const AppBar = (props) => {
             <Recent />
             <Starred />
             <Template />
-            <Button variant="outlined">Create</Button>
+            <Button variant="outlined" startIcon={<LibraryAddIcon />}>
+              Create
+            </Button>
           </Box>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -109,8 +112,8 @@ const AppBar = (props) => {
             onFocus={handleFocus}
             onBlur={handleBlur}
             sx={{
-              width: focused ? "400px" : "200px",
               "& .MuiInputBase-root": {
+                width: focused ? "500px" : "200px",
                 height: "30px",
               },
               display: { xs: "none", sm: "block" },
